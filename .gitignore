@@ -1,4 +1,2 @@
 .vscode/
-part_test/
-part_test/eslint.config.js
-part0/
+*_test/
