@@ -11,18 +11,18 @@ const Stadistics = ({ good, neutral, bad, total, average, positive }) => {
     return (
       <div>
         <h1>Stadistics</h1>
-        <Display name="Good" value={good} />
-        <Display name="Neutral" value={neutral} />
-        <Display name="Bad" value={bad} />
-        <Display name="All" value={total} />
-        <Display name="Average" value={average} />
-        <Display name="Positive" value={positive + ' %'} />
+        <StatisticLine name="Good" value={good} />
+        <StatisticLine name="Neutral" value={neutral} />
+        <StatisticLine name="Bad" value={bad} />
+        <StatisticLine name="All" value={total} />
+        <StatisticLine name="Average" value={average} />
+        <StatisticLine name="Positive" value={positive + ' %'} />
       </div>
     )
   }
 }
 
-const Display = (props) => (
+const StatisticLine = (props) => (
   <div>
     <p>{props.name}: {props.value}</p>
   </div>
