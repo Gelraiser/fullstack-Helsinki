@@ -18,6 +18,10 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
+  const total = good + neutral + bad
+  const average = total > 0 ? ((good - bad) / total).toFixed(2) : 0
+  const positive = total > 0 ? ((good / total) * 100).toFixed(2) : 0
+
   return (
     <div>
       <h1>Give Feedback</h1>
@@ -28,6 +32,10 @@ const App = () => {
       <Display name = "Good" value={good} />
       <Display name = "Neutral" value={neutral} />
       <Display name = "Bad" value={bad} />
+      <Display name = "All" value={total} />
+      <Display name = "Average" value={average} />
+      <Display name = "Positive" value={positive + ' % '} />
+
 
 
     </div>
