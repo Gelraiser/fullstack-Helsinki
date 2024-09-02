@@ -8,24 +8,42 @@ const Stadistics = ({ good, neutral, bad, total, average, positive }) => {
       <p>No Feedback given</p>
       </div>
   } else {
-    return (
-      <div>
-        <h1>Stadistics</h1>
-        <StatisticLine name="Good" value={good} />
-        <StatisticLine name="Neutral" value={neutral} />
-        <StatisticLine name="Bad" value={bad} />
-        <StatisticLine name="All" value={total} />
-        <StatisticLine name="Average" value={average} />
-        <StatisticLine name="Positive" value={positive + ' %'} />
-      </div>
+    // return (
+    //   <div>
+    //     <h1>Stadistics</h1>
+    //     <StatisticLine name="Good" value={good} />
+    //     <StatisticLine name="Neutral" value={neutral} />
+    //     <StatisticLine name="Bad" value={bad} />
+    //     <StatisticLine name="All" value={total} />
+    //     <StatisticLine name="Average" value={average} />
+    //     <StatisticLine name="Positive" value={positive + ' %'} />
+    //   </div>
+      return (
+        <div>
+          <h1>Stadistics</h1>
+          <table>
+            <tbody>
+              <StatisticLine name="Good" value={good} />
+              <StatisticLine name="Neutral" value={neutral} />
+              <StatisticLine name="Bad" value={bad} />
+              <StatisticLine name="All" value={total} />
+              <StatisticLine name="Average" value={average} />
+              <StatisticLine name="Positive" value={positive + ' %'} />
+            </tbody>
+          </table>
+        </div>
     )
   }
 }
 
-const StatisticLine = (props) => (
-  <div>
-    <p>{props.name}: {props.value}</p>
-  </div>
+const StatisticLine = (props) => (  
+  <tr>
+    <td>{props.name}: </td>
+    <td>{props.value} </td>    
+  </tr>
+//   <div>
+//   <p>{props.name}: {props.value}</p>
+// </div>
 )
 
 const Button = (props) => (
