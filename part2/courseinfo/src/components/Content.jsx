@@ -1,17 +1,13 @@
-
-
-const Part = ({ part }) => {
-    return <p>{part.name} {part.exercises}</p>
-}
+import Part from './Parts'
 
 const Content = ({ course }) => {
     return (
-        <div>
-            {course.parts.map(part =>
-            <Part key={part.id} part={part} />
+      <div>
+        {course.parts.map(part =>
+          <Part key={part.id} part={part} />
         )}
-        </div>
+      </div>
     )
-    }
-
-export default Content
+  }
+  
+  export default Content

@@ -3,11 +3,12 @@ import Content from './Content'
 import Total from './Total'
 
 const Course = ({ course }) => {
+  console.log(course.name)
     return (
       <div>
         <Header course={course} />
         <Content course={course} />
-        <Total parts={course.parts} />
+        <Total course={course} />
       </div>
     )
   }
